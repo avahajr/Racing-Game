@@ -80,7 +80,7 @@ public class PrometeoCarController : MonoBehaviour
       //[Header("UI")]
       [Space(10)]
       //The following variable lets you to set up a UI text to display the speed of your car.
-      public bool useUI = true;
+      public bool useUI = false;
       public Text carSpeedText; // Used to store the UI object that is going to show the speed of the car.
 
     //SOUNDS
@@ -89,7 +89,7 @@ public class PrometeoCarController : MonoBehaviour
       //[Header("Sounds")]
       [Space(10)]
       //The following variable lets you to set up sounds for your car such as the car engine or tire screech sounds.
-      public bool useSounds = true;
+      public bool useSounds = false;
       public AudioSource carEngineSound; // This variable stores the sound of the car engine.
       public AudioSource tireScreechSound; // This variable stores the sound of the tire screech (when the car is drifting).
       float initialCarEngineSoundPitch; // Used to store the initial pitch of the car engine sound.
@@ -134,6 +134,7 @@ public class PrometeoCarController : MonoBehaviour
       float localVelocityX;
       bool deceleratingCar;
       bool touchControlsSetup = false;
+
       /*
       The following variables are used to store information about sideways friction of the wheels (such as
       extremumSlip,extremumValue, asymptoteSlip, asymptoteValue and stiffness). We change this values to
@@ -249,6 +250,7 @@ public class PrometeoCarController : MonoBehaviour
             Debug.LogWarning(ex);
           }
         }
+
 
     }
 
